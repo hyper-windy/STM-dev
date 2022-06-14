@@ -1,0 +1,27 @@
+{
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"../../frameworks/cocos2d-html5",
+
+    "modules" : [
+		"cocos2d",  
+		"extensions",
+        "external",
+        "cocostudio"
+	],
+
+    "jsList" : [
+        "src/Resource.js",
+
+        "src/GameConfig/MainConFig.js",
+        "src/GameConfig/MapConfig.js",
+
+        "src/Map/Cell.js",
+        "src/Map/Map.js",
+        "src/Matching/MatchingLayer.js",
+        "src/Map/BattleScene.js"
+    ]
+}
