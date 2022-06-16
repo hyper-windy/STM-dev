@@ -19,6 +19,8 @@
         "src/GameConfig/MainConFig.js",
         "src/GameConfig/MapConfig.js",
 
+        "src/Helper.js",
+
         "src/Map/Cell.js",
         "src/Map/Map.js",
         "src/Matching/MatchingLayer.js",

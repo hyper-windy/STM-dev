@@ -2,6 +2,8 @@
 
 var BattleScene = cc.Scene.extend({
     battleUI: null,
+    enemyMap: null,
+    myMap: null,
 
     ctor:function(){
         this._super();
@@ -24,14 +26,31 @@ var BattleScene = cc.Scene.extend({
         spineRiverFlow.setNormalizedPosition(0.5, 0.477);
         this.battleUI.addChild(spineRiverFlow);
 
-        var enemy_map = new Map(false);
-        var my_map = new Map(true);
+        this.enemyMap = new Map(false);
+        this.myMap = new Map(true);
 
-        this.battleUI.addChild(enemy_map);
-        this.battleUI.addChild(my_map);
+        this.enemyMap.setBuffCells(0);
+        if(this.checkEqualListBuff()){
+            this.myMap.setBuffCells(1);
+        }
+        else{
+            this.myMap.setBuffCells(0);
+        }
+
+        this.battleUI.addChild(this.enemyMap);
+        this.battleUI.addChild(this.myMap);
 
         this.addChild(this.battleUI);
 
+    },
+
+    checkEqualListBuff:function(){
+        var myListBuff = this.myMap.listBuff;
+        var enemyListBuff = this.enemyMap.listBuff;
+        for(var i = 0; i < myListBuff.length; i++){
+            if (!Helper.equalPoint(myListBuff[i], enemyListBuff[i])) return false;
+        }
+        return true;
     }
 });
 

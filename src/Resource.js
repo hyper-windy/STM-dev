@@ -105,6 +105,9 @@ var res = {
 
 	cell_sprite: "res/Asset/battle/battle_item_cell.png",
 	transparent_cell: "res/Asset/battle/UI/ui_transparent_square.png",
+	cell_buff_damage: "res/Asset/battle/battle_item_damage.png",
+	cell_buff_speed: "res/Asset/battle/battle_item_attack_speed.png",
+	cell_buff_rage: "res/Asset/battle/battle_item_range.png",
 }
 
 
